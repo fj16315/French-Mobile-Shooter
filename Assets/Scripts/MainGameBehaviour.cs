@@ -23,6 +23,7 @@ public class MainGameBehaviour : MonoBehaviour
     }
     else if (info.IsName("Load Question"))
     {
+      Camera.main.GetComponent<APIControl>().GetEntry();
       questionPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Right Answer"))
