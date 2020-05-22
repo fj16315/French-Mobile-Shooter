@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class QuestionPopupControl : MonoBehaviour
 {
   public Animator mainGameStateMachine;
+  public bool isUsable;
 
   public void AdvanceStateMachine()
   {
@@ -21,6 +22,15 @@ public class QuestionPopupControl : MonoBehaviour
     else
     {
       mainGameStateMachine.SetTrigger("Wrong Answer");
+    }
+  }
+
+  private void LateUpdate()
+  {
+    if (!isUsable)
+    {
+      GetComponent<CanvasGroup>().interactable = false;
+      GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
   }
 }

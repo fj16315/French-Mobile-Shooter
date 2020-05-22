@@ -223,6 +223,7 @@ MonoBehaviour:
   questionPopup: {fileID: 619704171}
   answerPopup: {fileID: 550440445}
   answerObject: {fileID: 550440440}
+  questionObject: {fileID: 619704166}
 --- !u!95 &71602515
 Animator:
   serializedVersion: 3
@@ -258,6 +259,7 @@ MonoBehaviour:
   answers:
   - Hello
   - Goodbye
+  - Dog
 --- !u!1 &277067749
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class MainGameBehaviour : MonoBehaviour
   public Animator questionPopup;
   public Animator answerPopup;
   public GameObject answerObject;
+  public GameObject questionObject;
 
   public void ControlBehaviour(AnimatorStateInfo info)
   {
@@ -23,16 +24,19 @@ public class MainGameBehaviour : MonoBehaviour
     }
     else if (info.IsName("Load Question"))
     {
+      questionObject.GetComponent<QuestionPopupControl>().isUsable = true;
       Camera.main.GetComponent<APIControl>().GetEntry();
       questionPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Right Answer"))
     {
+      questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
       answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Right Answer";
       answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Wrong Answer"))
     {
+      questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
       answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong Answer";
       answerPopup.SetTrigger("Fade In");
     }
