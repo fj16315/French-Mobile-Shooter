@@ -29,7 +29,7 @@ public class APIControl : MonoBehaviour
     answer2 = buttons[1].GetComponentInChildren<TextMeshProUGUI>();
     answer1Correct = buttons[0].GetComponent<ButtonData>().isCorrect;
     answer2Correct = buttons[1].GetComponent<ButtonData>().isCorrect;
-    lang = "en-ja";
+    lang = "en-fr";
   }
 
   private void SendRequest<T>(string url, UnityAction<T> callbackOnSuccess, UnityAction<string> callbackOnFail)
