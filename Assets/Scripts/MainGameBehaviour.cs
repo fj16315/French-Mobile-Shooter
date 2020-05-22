@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,8 @@ public class MainGameBehaviour : MonoBehaviour
 {
   public Animator introPopup;
   public Animator questionPopup;
-  public Image leftButton;
-  public Image rightButton;
+  public Animator answerPopup;
+  public GameObject answerObject;
 
   public void ControlBehaviour(AnimatorStateInfo info)
   {
@@ -26,11 +27,21 @@ public class MainGameBehaviour : MonoBehaviour
     }
     else if (info.IsName("Right Answer"))
     {
-      leftButton.color = Color.green;
+      answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Right Answer";
+      answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Wrong Answer"))
     {
-      rightButton.color = Color.red;
+      answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong Answer";
+      answerPopup.SetTrigger("Fade In");
+    }
+    else if (info.IsName("Fade Question"))
+    {
+      questionPopup.SetTrigger("Fade Out");
+    }
+    else if (info.IsName("Fade Answer"))
+    {
+      answerPopup.SetTrigger("Fade Out");
     }
   }
 }

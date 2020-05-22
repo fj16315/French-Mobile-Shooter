@@ -12,13 +12,15 @@ public class QuestionPopupControl : MonoBehaviour
     mainGameStateMachine.SetTrigger("Animation Complete");
   }
 
-  public void RightAnswer()
+  public void Answer(ButtonData data)
   {
-    mainGameStateMachine.SetTrigger("Right Answer");
-  }
-
-  public void WrongAnswer()
-  {
-    mainGameStateMachine.SetTrigger("Wrong Answer");
+    if (data.isCorrect)
+    {
+      mainGameStateMachine.SetTrigger("Right Answer");
+    }
+    else
+    {
+      mainGameStateMachine.SetTrigger("Wrong Answer");
+    }
   }
 }
