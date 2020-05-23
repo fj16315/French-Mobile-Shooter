@@ -10,9 +10,9 @@ using UnityEngine.UI;
 public class APIControl : MonoBehaviour
 {
   public GameObject questionPopup;
-  private Text question;
-  private TextMeshProUGUI answer1;
-  private TextMeshProUGUI answer2;
+  public Text question;
+  private Text answer1;
+  private Text answer2;
   private bool answer1Correct;
   private bool answer2Correct;
 
@@ -23,10 +23,9 @@ public class APIControl : MonoBehaviour
 
   private void Awake()
   {
-    question = questionPopup.GetComponentInChildren<Text>();
     var buttons = questionPopup.GetComponentsInChildren<Button>();
-    answer1 = buttons[0].GetComponentInChildren<TextMeshProUGUI>();
-    answer2 = buttons[1].GetComponentInChildren<TextMeshProUGUI>();
+    answer1 = buttons[0].GetComponentInChildren<Text>();
+    answer2 = buttons[1].GetComponentInChildren<Text>();
     answer1Correct = buttons[0].GetComponent<ButtonData>().isCorrect;
     answer2Correct = buttons[1].GetComponent<ButtonData>().isCorrect;
     lang = "en-fr";

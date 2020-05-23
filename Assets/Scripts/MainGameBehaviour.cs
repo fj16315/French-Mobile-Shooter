@@ -13,6 +13,7 @@ public class MainGameBehaviour : MonoBehaviour
   public GameObject answerObject;
   public GameObject questionObject;
   public Animator timePopup;
+  public Text timeObject;
   public Text scoreText;
   private int score = 0;
   private Timer timer;
@@ -42,14 +43,14 @@ public class MainGameBehaviour : MonoBehaviour
     else if (info.IsName("Right Answer"))
     {
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
-      answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Right Answer";
+      answerObject.GetComponentInChildren<Text>().text = "Right Answer";
       IncrementScore();
       answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Wrong Answer"))
     {
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
-      answerObject.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong Answer";
+      answerObject.GetComponentInChildren<Text>().text = "Wrong Answer";
       answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Fade Question"))
@@ -62,6 +63,7 @@ public class MainGameBehaviour : MonoBehaviour
     }
     else if (info.IsName("Timed Out"))
     {
+      timeObject.text = string.Format("Final Score: {0}", score);
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
       timePopup.SetTrigger("Fade In");
     }
