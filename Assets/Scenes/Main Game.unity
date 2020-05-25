@@ -308,6 +308,7 @@ MonoBehaviour:
   timePopup: {fileID: 2096170638}
   timeObject: {fileID: 105120116}
   scoreText: {fileID: 1733142627}
+  asteroid: {fileID: 540700959}
 --- !u!95 &71602515
 Animator:
   serializedVersion: 3
@@ -345,6 +346,303 @@ MonoBehaviour:
   - Hello
   - Goodbye
   - Dog
+  - Cat
+  - Fish
+  - Bird
+  - Cow
+  - Pig
+  - Mouse
+  - Horse
+  - Train
+  - Plane
+  - Car
+  - Truck
+  - Bicycle
+  - Bus
+  - Boat
+  - City
+  - House
+  - Apartment
+  - Street
+  - Airport
+  - Bridge
+  - Hotel
+  - Restaurant
+  - Farm
+  - Court
+  - School
+  - Office
+  - Room
+  - Town
+  - University
+  - Club
+  - Bar
+  - Park
+  - Camp
+  - Shop
+  - Theater
+  - Library
+  - Hospital
+  - Church
+  - Market
+  - Country
+  - Building
+  - Space
+  - Bank
+  - Hat
+  - Dress
+  - Suit
+  - Skirt
+  - Shirt
+  - Pants
+  - Shoes
+  - Pocket
+  - Coat
+  - Stain
+  - Clothing
+  - Red
+  - Green
+  - Blue
+  - Yellow
+  - Brown
+  - Pink
+  - Orange
+  - Black
+  - White
+  - Grey
+  - Colour
+  - Son
+  - Daughter
+  - Mother
+  - Father
+  - Parent
+  - Baby
+  - Man
+  - Woman
+  - Brother
+  - Sister
+  - Family
+  - Grandfather
+  - Grandmother
+  - Husband
+  - Wife
+  - King
+  - Queen
+  - President
+  - Neighbor
+  - Boy
+  - Girl
+  - Child
+  - Adult
+  - Human
+  - Friend
+  - Teacher
+  - Student
+  - Lawyer
+  - Doctor
+  - Patient
+  - Waiter
+  - Secretary
+  - Priest
+  - Police
+  - Army
+  - Soldier
+  - Artist
+  - Author
+  - Manager
+  - Reporter
+  - Actor
+  - Job
+  - Religion
+  - Heaven
+  - Hell
+  - Death
+  - Medicine
+  - Money
+  - Marriage
+  - Wedding
+  - Team
+  - Race
+  - Sex
+  - Murder
+  - Prison
+  - Technology
+  - Energy
+  - War
+  - Peace
+  - Attack
+  - Election
+  - Magazine
+  - Newspaper
+  - Poison
+  - Gun
+  - Sport
+  - Exercise
+  - Ball
+  - Game
+  - Price
+  - Contract
+  - Drug
+  - Sign
+  - Science
+  - God
+  - Band
+  - Song
+  - Instrument
+  - Music
+  - Movie
+  - Art
+  - Coffee
+  - Tea
+  - Wine
+  - Beer
+  - Juice
+  - Water
+  - Milk
+  - Beverage
+  - Egg
+  - Cheese
+  - Bread
+  - Soup
+  - Cake
+  - Chicken
+  - Pork
+  - Beef
+  - Apple
+  - Banana
+  - Orange
+  - Lemon
+  - Corn
+  - Rice
+  - Oil
+  - Seed
+  - Knife
+  - Spoon
+  - Fork
+  - Plate
+  - Cup
+  - Breakfast
+  - Lunch
+  - Dinner
+  - Sugar
+  - Salt
+  - Bottle
+  - Food
+  - Table
+  - Chair
+  - Bed
+  - Dream
+  - Window
+  - Door
+  - Bedroom
+  - Kitchen
+  - Bathroom
+  - Pencil
+  - Pen
+  - Photograph
+  - Soap
+  - Book
+  - Page
+  - Key
+  - Paint
+  - Letter
+  - Note
+  - Wall
+  - Paper
+  - Floor
+  - Ceiling
+  - Roof
+  - Pool
+  - Lock
+  - Telephone
+  - Garden
+  - Yard
+  - Needle
+  - Bag
+  - Box
+  - Gift
+  - Card
+  - Ring
+  - Tool
+  - Clock
+  - Lamp
+  - Fan
+  - Network
+  - Computer
+  - Laptop
+  - Screen
+  - Camera
+  - Television
+  - Radio
+  - Head
+  - Neck
+  - Face
+  - Beard
+  - Hair
+  - Eye
+  - Mouth
+  - Lip
+  - Nose
+  - Tooth
+  - Ear
+  - Tear
+  - Tongue
+  - Back
+  - Toe
+  - Finger
+  - Foot
+  - Hand
+  - Leg
+  - Arm
+  - Shoulder
+  - Heart
+  - Blood
+  - Brain
+  - Knee
+  - Sweat
+  - Disease
+  - Bone
+  - Voice
+  - Skin
+  - Body
+  - Sea
+  - Ocean
+  - River
+  - Mountain
+  - Rain
+  - Snow
+  - Tree
+  - Sun
+  - Moon
+  - World
+  - Earth
+  - Forest
+  - Sky
+  - Plant
+  - Wind
+  - Flower
+  - Valley
+  - Root
+  - Lake
+  - Star
+  - Grass
+  - Leaf
+  - Air
+  - Sand
+  - Beach
+  - Wave
+  - Fire
+  - Ice
+  - Island
+  - Hill
+  - Heat
+  - Nature
+  - Glass
+  - Metal
+  - Plastic
+  - Wood
+  - Stone
+  - Diamond
 --- !u!114 &71602517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0006f29cba265cb4e86a1157333114c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 10
+  duration: 60
   display: {fileID: 258072997}
   startTimer: 0
 --- !u!114 &71602518
@@ -563,8 +861,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000028519, y: 332.07}
-  m_SizeDelta: {x: 549.6627, y: 103.85748}
+  m_AnchoredPosition: {x: -204.19, y: 332.07}
+  m_SizeDelta: {x: 958.0394, y: 103.85748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258072997
 MonoBehaviour:
@@ -606,6 +904,100 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258072995}
+  m_CullTransparentMesh: 0
+--- !u!1 &540700957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540700958}
+  - component: {fileID: 540700961}
+  - component: {fileID: 540700960}
+  - component: {fileID: 540700959}
+  m_Layer: 5
+  m_Name: Asteroid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &540700958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540700957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1558418164}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 512.26245, y: 428.28305}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &540700959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540700957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c062f71d8f5828c40b7701175d18dc00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &540700960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540700957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4154d1fee80653e44985dc27632725c2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &540700961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540700957}
   m_CullTransparentMesh: 0
 --- !u!1 &550440440
 GameObject:
@@ -2233,8 +2625,8 @@ Canvas:
   m_GameObject: {fileID: 1558418160}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 71602512}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2242,7 +2634,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1121863565
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1558418164
@@ -2258,6 +2650,7 @@ RectTransform:
   m_Children:
   - {fileID: 258072996}
   - {fileID: 1733142626}
+  - {fileID: 540700958}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

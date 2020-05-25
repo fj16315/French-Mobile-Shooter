@@ -18,6 +18,7 @@ public class MainGameBehaviour : MonoBehaviour
   public Text scoreText;
   private int score = 0;
   private Timer timer;
+  public Animator asteroid;
 
   private void Awake()
   {
@@ -36,10 +37,15 @@ public class MainGameBehaviour : MonoBehaviour
     }
     else if (info.IsName("Load Question"))
     {
+      asteroid.SetTrigger("Fly In");
       timer.startTimer = true;
       questionObject.GetComponent<QuestionPopupControl>().isUsable = true;
       Camera.main.GetComponent<APIControl>().GetEntry();
       questionPopup.SetTrigger("Fade In");
+    }
+    else if (info.IsName("Waiting For Answer"))
+    {
+      asteroid.SetTrigger("Spin");
     }
     else if (info.IsName("Right Answer"))
     {
@@ -47,12 +53,14 @@ public class MainGameBehaviour : MonoBehaviour
       answerHeader.text = "Right Answer";
       IncrementScore();
       answerPopup.SetTrigger("Fade In");
+      asteroid.SetTrigger("Explode");
     }
     else if (info.IsName("Wrong Answer"))
     {
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
       answerHeader.text = "Wrong Answer";
       answerPopup.SetTrigger("Fade In");
+      asteroid.SetTrigger("Fly Out");
     }
     else if (info.IsName("Fade Question"))
     {
