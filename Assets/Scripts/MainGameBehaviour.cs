@@ -12,6 +12,7 @@ public class MainGameBehaviour : MonoBehaviour
   public Animator answerPopup;
   public GameObject answerObject;
   public GameObject questionObject;
+  public Text answerHeader;
   public Animator timePopup;
   public Text timeObject;
   public Text scoreText;
@@ -43,14 +44,14 @@ public class MainGameBehaviour : MonoBehaviour
     else if (info.IsName("Right Answer"))
     {
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
-      answerObject.GetComponentInChildren<Text>().text = "Right Answer";
+      answerHeader.text = "Right Answer";
       IncrementScore();
       answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Wrong Answer"))
     {
       questionObject.GetComponent<QuestionPopupControl>().isUsable = false;
-      answerObject.GetComponentInChildren<Text>().text = "Wrong Answer";
+      answerHeader.text = "Wrong Answer";
       answerPopup.SetTrigger("Fade In");
     }
     else if (info.IsName("Fade Question"))

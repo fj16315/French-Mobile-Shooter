@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 71602515}
   - component: {fileID: 71602516}
   - component: {fileID: 71602517}
+  - component: {fileID: 71602518}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -303,6 +304,7 @@ MonoBehaviour:
   answerPopup: {fileID: 550440445}
   answerObject: {fileID: 550440440}
   questionObject: {fileID: 619704166}
+  answerHeader: {fileID: 1016248739}
   timePopup: {fileID: 2096170638}
   timeObject: {fileID: 105120116}
   scoreText: {fileID: 1733142627}
@@ -338,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionPopup: {fileID: 619704166}
+  question: {fileID: 1908130988}
   answers:
   - Hello
   - Goodbye
@@ -357,6 +360,19 @@ MonoBehaviour:
   duration: 10
   display: {fileID: 258072997}
   startTimer: 0
+--- !u!114 &71602518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71602510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c97516de7fd91c4587b4df0577e4aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 0.01
 --- !u!1 &105120114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Background Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915776006187830157, guid: f09b484eb2b3e514d9add43f6b764dcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f09b484eb2b3e514d9add43f6b764dcf, type: 3}
