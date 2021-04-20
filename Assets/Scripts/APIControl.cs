@@ -17,9 +17,10 @@ public class APIControl : MonoBehaviour
   private bool answer2Correct;
 
   public List<string> answers;
-  private const string API_URL = "https://translate.yandex.net/api/v1.5/tr.json/translate?key={0}&text={1}&lang={2}";
-  private string lang;
-  private const string API_KEY = "trnsl.1.1.20200522T203236Z.cba72e47fbec75d1.90e97c15148467f5dde43aa46f8c95bf4e246263";
+  private const string API_URL = "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source={0}&target={1}&input={2}";
+  private string source;
+  private string target;
+  private const string API_KEY = "51456f48bbmsh3c8601094700b05p1a7cd3jsn746629439ed0";
 
   private void Awake()
   {
@@ -28,7 +29,8 @@ public class APIControl : MonoBehaviour
     answer2 = buttons[1].GetComponentInChildren<Text>();
     answer1Correct = buttons[0].GetComponent<ButtonData>().isCorrect;
     answer2Correct = buttons[1].GetComponent<ButtonData>().isCorrect;
-    lang = "en-fr";
+    source = "en";
+    target = "fr";
   }
 
   private void SendRequest<T>(string url, UnityAction<T> callbackOnSuccess, UnityAction<string> callbackOnFail)
@@ -40,7 +42,8 @@ public class APIControl : MonoBehaviour
   {
     var www = UnityWebRequest.Get(url);
     //www.SetRequestHeader("app_id", API_ID);
-    //www.SetRequestHeader("app_key", API_KEY);
+    www.SetRequestHeader("x-rapidapi-key", API_KEY);
+    www.SetRequestHeader("x-rapidapi-host", "systran-systran-platform-for-language-processing-v1.p.rapidapi.com");
     yield return www.SendWebRequest();
     if (www.isNetworkError || www.isHttpError)
     {
@@ -62,8 +65,8 @@ public class APIControl : MonoBehaviour
 
   private void APICallSucceed(DictionaryResult entry)
   {
-    Debug.Log(entry.text[0]);
-    question.text = entry.text[0];
+    Debug.Log(entry.outputs[0].output);
+    question.text = entry.outputs[0].output;
   }
 
   private void APICallFailed(string errorMessage)
@@ -104,12 +107,18 @@ public class APIControl : MonoBehaviour
       answer2Correct = true;
     }
 
-    SendRequest(string.Format(API_URL, API_KEY, firstAnswer, lang), callbackOnSuccess, callbackOnFail);
+    SendRequest(string.Format(API_URL, source, target, firstAnswer), callbackOnSuccess, callbackOnFail);
   }
 }
 
 [Serializable]
 public class DictionaryResult
 {
-  public List<string> text;
+  public List<Output> outputs;
+}
+
+[Serializable]
+public class Output
+{
+  public string output;
 }
